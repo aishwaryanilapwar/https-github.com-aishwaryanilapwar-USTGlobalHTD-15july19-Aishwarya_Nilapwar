@@ -1,0 +1,10 @@
+<div class="offset-md-4">
+<div class="col-md-5 mt-5 card card-body">
+    <h3 class="text-center text-white bg-dark">Add Task</h3>
+    <form #taskInfo='ngForm' (ngSubmit)='postTask(taskInfo)'>
+        <input type="text" name="taskname" #taskname='ngModel' placeholder="Enter Task Name" class="form-control "
+           ngModel required>
+        <button type="submit" class="btn btn-outline-success float-right mt-3" >Submit</button>
+    </form>
+</div>
+</div>

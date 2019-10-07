@@ -1,0 +1,18 @@
+<div class="container">
+    <table class="table table-bordered table-hover col-md-5 mt-5 offset-3  table-striped">
+        <thead class="thead-info mt-5 thead-dark">
+            <tr>
+                <th>Task Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let task of service.tasks '>
+                <td>{{task.taskname}}</td>
+                <td>{{task.tsd}}</td>
+                <td>{{task.ted}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
