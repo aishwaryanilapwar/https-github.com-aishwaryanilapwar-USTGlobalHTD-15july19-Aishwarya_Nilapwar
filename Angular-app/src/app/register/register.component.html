@@ -1,0 +1,46 @@
+<div class="container  mt- card card-body col-md-4 ">
+<form action="" [formGroup]='registerForm' (ngSubmit)='printForm(registerForm)'>
+       <h3 class="text-center">Registration Form</h3>
+       
+       <div class="form-group col-md-12">
+        <label for="">Name</label>
+        <input type="text" class="form-control" id="" name="name" placeholder="Name"  formControlName='name'>
+        <div *ngIf='name.touched && name.invalid'>
+          <div class="alert alert-danger" *ngIf='name.errors.minlength'>
+              minimum length is 3
+          </div>
+        </div>
+       </div>
+
+
+       <div class="form-group col-md-12">
+          <label for="">E-mail</label>
+          <input type="email" class="form-control" id="" name="email" placeholder="Email" formControlName='email'>
+          <div *ngIf='email.touched && email.invalid'>
+            <div class="alert alert-danger" *ngIf='email.errors.noSpace'>
+              no space allowed
+            </div>
+          </div>
+        </div>
+
+       <div class="form-group col-md-12">
+        <label for="">Mobile Number</label>
+        <input type="text" class="form-control" id="" name="phno" placeholder="Name" formControlName='phno'>
+       </div>
+    
+          <div class="form-group col-md-12">
+            <label for="">Password</label>
+            <input type="password" class="form-control" name="" id="" placeholder="Password" >
+          </div>
+
+           <div class="form-group col-md-12">
+            <label for="">Password</label>
+            <input type="password" class="form-control" id="" name="" placeholder="Password">
+          </div>
+       
+       
+        <div class="btn-group col-md-3 offset-4">
+        <button type="submit" [disabled]='registerForm.invalid' class="btn btn-primary">Sign in</button>
+        </div>
+      </form>
+    </div>
