@@ -1,0 +1,43 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-md-4 offset-3">
+        <div class="card card-body">
+            <div class="form-group">
+    <form action="" #prodform='ngForm' (ngSubmit)='printForm(prodform)'>
+        <input type="text" name="title" class="form-control" placeholder="entername" #name='ngModel' ngModel>
+        <input type="text" name="imgUrl" class="form-control" placeholder="enter image" #imgUrl='ngModel' ngModel>
+        <textarea name="description" placeholder="enter description" id="" cols="30" ngModel #description='ngModel' rows="10"></textarea>
+        <button type="submit" [disabled]='prodform.invalid'>Submit</button>
+    </form>
+</div>    
+</div>
+</div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-md-4 offset-md-3 card card-body mt-5">
+        <h2 class="text-info">Product Information</h2>
+   <form action="" #productForm='ngForm' (ngSubmit)='postProduct(productForm)' >
+       <input type="text" name="title" class="form-control" #title='ngModel' placeholder="enter title" [(ngModel)]=' this.service.selectedProduct.title' ngModel id="">
+      <br> <input type="text" name="image" #image='ngModel' class="form-control" placeholder="enter Specification"  [(ngModel)]=' this.service.selectedProduct.image' ngModel id="">
+      <br> <input type="text" name="description" #description='ngModel' class="form-control" [(ngModel)]=' this.service.selectedProduct.description' placeholder="enter description" ngModel id="">
+      <br> <button type="submit" class="btn btn-success mt-3 offset-4">Submit</button>
+   </form>    
+    </div>
+</body>
+</html>
