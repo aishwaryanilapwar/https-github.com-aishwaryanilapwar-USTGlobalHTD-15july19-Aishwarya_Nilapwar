@@ -1,0 +1,11 @@
+<div class="container  mt-4">
+        <div class="col-md-3 float-left">
+            <div class="card card-body" *ngFor="let ne of news">
+                <img src="{{ne.img}}" alt="" class="card-img-top" (click)="sendNews(ne)">
+                <h4 class="card-title text-center">{{ne.name}}</h4>
+    
+            </div>
+    
+        </div>
+        <app-news-details [newDetails]='newsData'></app-news-details>
+    </div>
